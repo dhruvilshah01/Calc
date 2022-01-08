@@ -1,5 +1,6 @@
 //@ts-check
-//Set needed variables
+//Set needed variables 
+
 let operatorpicked = false;   
 let whatoperator = '';
 let operator = '';  
@@ -63,16 +64,16 @@ class Calculator {
     function operate(operator) { 
      switch(operator){
         case '+':    
-            return calc.add(parseInt(firstnumber), parseInt(secondnumber));
+            return (calc.add(parseFloat(firstnumber), parseFloat(secondnumber)) * 1000) / 1000;
             break;
         case '-': 
-            return calc.subtract(parseInt(firstnumber), parseInt(secondnumber));
+            return (calc.subtract(parseFloat(firstnumber), parseFloat(secondnumber)) * 1000) / 1000;
             break;
         case 'x':  
-            return calc.multiply(parseInt(firstnumber), parseInt(secondnumber));
+            return (calc.multiply(parseFloat(firstnumber), parseFloat(secondnumber)) * 1000 ) / 1000;
             break;
         case '/':
-            return calc.divide(parseInt(firstnumber), parseInt(secondnumber));
+            return (calc.divide(parseFloat(firstnumber), parseFloat(secondnumber)) * 1000) / 1000;
             break; 
 
 }
@@ -94,7 +95,7 @@ class Calculator {
          }
          else {   
             
-            displayvalue.innerText = operate(whatoperator);   
+            displayvalue.innerText = (operate(whatoperator)).toPrecision(7);   
             firstnumber = displayvalue.innerText;
             secondnumber = '';
             whatoperator = button.innerHTML;
@@ -109,7 +110,7 @@ class Calculator {
       
      equal.addEventListener('click',()=> { 
        
-            displayvalue.innerText = operate(whatoperator);  
+            displayvalue.innerText = operate(whatoperator).toString();  
             operatorpicked = true; 
             firstnumber = displayvalue.innerText; 
             secondnumber = '';   

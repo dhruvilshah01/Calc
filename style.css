@@ -1,62 +1,91 @@
 h1{ 
-    position: relative; 
-    left: 37%;
+    position: relative;  
+    text-align: center;   
+} 
+
+body{ 
+    width:100%; 
+    height: 100%; 
+    min-width:600px; 
+    max-width:2000px 
 }
 
 #main {  
-    position: relative; 
-    left: 87vh; 
-    top: 10vh;
-    height: 40vh; 
-    width: 40vh;  
+    position: relative;   
+    width: 20%;    
+    height: 100%; 
+    border: medium solid black; 
+    border-radius: 10px; 
+    margin: 0 auto;
     
 }   
-#display{
-    outline: solid; 
-    outline-color: black;  
-    outline-width: 2px;
-    height: 3vh; 
-    width: 33vh; 
+#display{ 
+    border-bottom: medium solid black; 
+    height: 13%;  
+    width: 100%; 
     position: relative;
-    left:20px;
+    text-align: right;
+    font-size: 5vh;  
 } 
 
 
 .buttons {     
-    display: flex; 
-    flex-flow: row wrap;  
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr);   
+    position: relative; 
+
     
-}  
+    
+} 
+
 .number { 
-    height: 10vh; 
-    width: 10vh;   
-    background-color: #20639b; 
+    height: 65px; 
+    width: 100%;   
+    background-color: #240090; 
     Color: white;  
-    border-radius: 40%;
+    font-size: large; 
+    border: thin solid black;
     
 
-}  
-.operator { 
-    height: 10vh; 
-    width: 10vh;  
-    background-color: #20639b; 
-    Color: white;  
-    border-radius: 40%;
 }   
 
+.number:active { 
+    background-color: #15f1a8; 
+    border: medium solid gray; 
+    border-style: inset; 
+    
+}
+
+.operator { 
+    height: 100%; 
+    width: 100%;  
+    background-color: #282828; 
+    Color: white;   
+    font-size: large; 
+    border: none;
+}   
+
+.operator:active { 
+    background-color: #15f1a8;
+}
+
 .equal { 
-    height: 10vh; 
-    width: 10vh; 
-    background-color: #20639b; 
-    Color: white;
-    border-radius: 40%;
+    height: 100%; 
+    width: 100%; 
+
 }  
 
+.equal:active { 
+    background-color: #15f1a8;
+}
+
 .clear { 
-    height: 10vh; 
-    width: 10vh;   
-    background-color: #20639b; 
-    Color: white;  
-    border-radius: 40%;
+    height: 100%; 
+    width: 100%;   
+   
     
+}   
+
+.clear:active {  
+    background-color: #15f1a8;
 }
